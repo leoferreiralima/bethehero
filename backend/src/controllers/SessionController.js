@@ -5,9 +5,8 @@ class SessionController{
     const {code} = req.body;
     
     const ong = await Ong.findOne({
-      attributes:{
-        include:["id"]
-      },where:{
+      attributes:["id","name"],
+      where:{
         code
       }
     });
@@ -19,7 +18,8 @@ class SessionController{
     }
 
     res.status(201).json({
-      token: ong.generateToken()
+      token: ong.generateToken(),
+      ong
     });
   }
 

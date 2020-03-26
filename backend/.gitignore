@@ -5,3 +5,4 @@ yarn-error.log
 .env
 /coverage
 /__test__/database.sqlite
+/yarn.lock
