@@ -16,6 +16,8 @@ class IncidentController{
 
   async index (req,res){
     let {page=1,pageSize=5} = req.query;
+    page = parseInt(page);
+    pageSize = parseInt(pageSize);
     if(page< 1){
       page = 1;
     }

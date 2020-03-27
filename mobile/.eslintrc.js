@@ -40,5 +40,6 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-console': 'off',
     quotes: ["error", "double"],
+    "import/no-extraneous-dependencies": "off"
   },
 };
